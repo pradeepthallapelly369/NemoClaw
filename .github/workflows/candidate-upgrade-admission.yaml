@@ -139,7 +139,7 @@ jobs:
           NODE
       - name: Upload the verified candidate SDK
         if: steps.package.outputs.required == 'true'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: ${{ steps.package.outputs.bundle_name }}
           path: ${{ runner.temp }}/candidate-sdk/${{ steps.package.outputs.artifact_name }}
